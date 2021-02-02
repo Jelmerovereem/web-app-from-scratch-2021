@@ -37,6 +37,7 @@ $ browser-sync -w -s -p 5000 # Starts a browser-sync server on port 5000 that wa
 ## APIs used
 
 - [The OpenWeather map API](https://openweathermap.org/api)
+- [Leaflet map](https://leafletjs.com/)
 
 ## User Interaction Flow
 
