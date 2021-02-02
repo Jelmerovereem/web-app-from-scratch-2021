@@ -1,13 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Single page web app</title>
-	<link rel="stylesheet" href="styles/style.css">
-</head>
-<body>
-	<h1>Hello world</h1>
-	<script src="scripts/script.js"></script>
-</body>
-</html>
+	<head>
+		<meta charset="UTF-8">
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>Single page web app</title>
+		<link rel="stylesheet" href="styles/style.css">
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+			integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+			crossorigin=""/>
+			<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+			integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+			crossorigin=""></script>
+		</head>
+		<body>
+			<div class="desktop">
+				<h1>Krijg het weer</h1>
+				<label for="city">Stad</label>
+				<input type="text" id="city" class="searchCity" value="Amsterdam">
+				<a href="javascript:void(0)" class="getLocation">Mijn locatie</a>
+				<a href="javascript:void(0)" class="searchBtn">Krijg het weer</a>
+				<article>
+					<h2>Weer van <span class="citySpan"></span></h2>
+					<table>
+						<tr>
+							<td>Temperature</td>
+							<td class="tempCell"></td>
+						</tr>
+					</table>
+					<div class="resizable">
+						<div class="resizers">
+							<div class='resizer top-left'></div>
+							<div class='resizer top-right'></div>
+							<div class='resizer bottom-left'></div>
+							<div class='resizer bottom-right'></div>
+							<div id="map"></div>
+						</div>
+					</div>
+				</article>
+			</div>
+			<div class="mobile">
+				<div class="searchContent">
+					<input type="text" class="searchCityMobile" value="Amsterdam">
+					<a href="javascript:void(0)" class="searchBtnMobile">Zoeken</a>
+				</div>
+				<div id="mobileMap"></div>
+			</div>
+			<script src="scripts/script.js"></script>
+			<script src="scripts/resize.js"></script>
+		</body>
+	</html>
