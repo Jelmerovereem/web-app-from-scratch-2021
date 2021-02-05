@@ -33,7 +33,7 @@ function showErr() {
 }
 
 /* Init leaflet map */
-const leafletMap = L.map("map").setView([50,2], 13);
+const leafletMap = L.map("map", {zoomControl: false}).setView([50,2], 13);
 L.tileLayer(`https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/{z}/{x}/{y}?access_token=${mapboxAccessToken}`, {
 	tileSize: 512,
 	zoomOffset: -1,
