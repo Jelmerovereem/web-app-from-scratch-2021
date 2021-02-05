@@ -5,6 +5,7 @@ const searchInput = document.querySelector(".searchCity");
 const getLocationBtn = document.querySelector(".getLocation");
 const searchBtn = document.querySelector(".searchBtn");
 const tempCell = document.querySelector(".tempCell");
+const errMsg = document.querySelector(".err-msg");
 
 /* fetch weather data from openweather api based on coords */
 function getWeatherCoords(lat, lon) {
@@ -14,8 +15,21 @@ function getWeatherCoords(lat, lon) {
 
 /* fetch weather data from openweather api based on city name */
 function getWeatherCity(city) {
+	console.log(city)
 	return fetch(`${baseUrl}?q=${city}&units=${units}&appid=${apikey}`)
-	.then(response => response.ok ? response.json() : console.log(response.ok))
+	.then((response) => {
+		if (response.ok) {
+			errMsg.classList.remove("showError");
+			return response.json();
+		} else {
+			showErr();
+		}
+	})
+}
+
+function showErr() {
+	errMsg.classList.add("showError");
+	errMsg.innerText = "Kon opgegeven stad niet vinden. Probeer iets anders :)";
 }
 
 /* Init leaflet map */
@@ -26,6 +40,8 @@ L.tileLayer(`https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/{z}/{x}/{
 	accessToken: mapboxAccessToken
 }).addTo(leafletMap);
 
+L.control.zoom({position: "bottomright"}).addTo(leafletMap)
+
 const popup = L.popup();
 
 function onMapClick(e) {
@@ -33,6 +49,7 @@ function onMapClick(e) {
 }
 
 leafletMap.on("click", onMapClick);
+leafletMap.on("move", () => {leafletMap.invalidateSize();})
 
 /* set view of map */
 function toMap(coordinates, temp) {
@@ -69,6 +86,7 @@ function getCoords(lat, lon) {
 function getCity() {
 	getWeatherCity(searchInput.value)
 	.then((data) => {
+		console.log(data)
 		//tempCell.innerText = `${data.main.temp}°C`;
 		toMap(data.coord, data.main.temp);
 	})
