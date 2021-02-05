@@ -12,9 +12,6 @@ html, body, #map {
 
 .searchContent {
 	width: 500px;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
 	background: white;
 	top: 10px;
 	left: 10px;
@@ -63,6 +60,14 @@ html, body, #map {
 	.searchContent {
 		position: absolute;
 		top: 10px;
-		right: 10px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 90%;
+		padding: 0 10px;
+	}
+
+	.searchCity {
+		display: block;
+		margin: 5px 0 15px 0;
 	}
 }
