@@ -57,7 +57,7 @@ getLocationBtn.addEventListener("click", getLocation);
 function getCoords(lat, lon) {
 	getWeatherCoords(lat, lon)
 	.then((data) => {
-		tempCell.innerText = `${data.main.temp}°C`;
+		//tempCell.innerText = `${data.main.temp}°C`;
 		toMap(data.coord, data.main.temp);
 	})
 	.catch(err => console.log(err))
@@ -66,60 +66,10 @@ function getCoords(lat, lon) {
 function getCity() {
 	getWeatherCity(searchInput.value)
 	.then((data) => {
-		tempCell.innerText = `${data.main.temp}°C`;
+		//tempCell.innerText = `${data.main.temp}°C`;
 		toMap(data.coord, data.main.temp);
 	})
 	.catch(err => console.log(err))
 }
 
 searchBtn.addEventListener("click", getCity);
-
-//mobile section
-
-const mobileSearchBtn = document.querySelector(".searchBtnMobile");
-const mobileSearchInput = document.querySelector(".searchCityMobile");
-
-const mobileLeafletMap = L.map("mobileMap").fitWorld();
-L.tileLayer(`https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=${mapboxAccessToken}`, {
-	maxZoom: 18,
-	attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
-			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-	id: 'mapbox/streets-v11',
-	tileSize: 512,
-	zoomOffset: -1
-}).addTo(mobileLeafletMap);
-
-
-function onLocationFound(e) {
-	const radius = e.accuracy;
-
-	L.marker(e.latlng).addTo(mobileLeafletMap)
-		.bindPopup(radius);
-
-	L.circle(e.latlng, radius).addTo(mobileLeafletMap)
-}
-
-function onLocationError(e) {
-	alert(e.message);
-}
-
-mobileLeafletMap.on("locationfound", onLocationFound);
-mobileLeafletMap.on("locationerror", onLocationError);
-
-mobileLeafletMap.locate({setView: true, maxZoom:16});
-
-
-function mobileMap(coords) {
-	mobileLeafletMap.setView(coords, 13);
-}
-
-function getMobileData() {
-	console.log("clicked")
-	getWeatherCity(mobileSearchInput.value)
-	.then((data) => {
-		console.log(data)
-		mobileMap(data.coord)
-	})
-}
-
-mobileSearchBtn.addEventListener("click", getMobileData);

@@ -1,59 +1,22 @@
-@media screen and (min-width: 768px) {
-	.mobile {
-		display: none;
-	}
-}
 body {
 	font-family: 'poppins';
 }
 
 #map {
-	width: 100%;
-	height: 100%;
+	width: 800px;
+	height: 600px;
 	transition: width 1s, height 1s;
 }
 
-.resizable {
-	width: 300px;
-	height: 300px;
-/*	border-radius: 30px;*/
-}
-
-.resizers {
-	width: 100%;
-	height: 100%;
-	border: 3px solid #4286f4;
-	box-sizing: border-box;
-	position: relative;
-}
-
-.resizer {
-	width: 10px;
-	height: 10px;
-	border-radius: 50%; /*magic to turn square into circle*/
-	background: white;
-	border: 3px solid #4286f4;
-	position: absolute;
-	cursor: nwse-resize;
-}
-
-.top-left {left: -10px; top: -10px;}
-.top-right {right: -10px; top: -10px;}
-.bottom-left {left: -10px; bottom: -10px;}
-.bottom-right {right: -10px; bottom: -10px;}
-
 
 @media screen and (max-width: 768px) {
-	.desktop {
-		display: none;
-	}
 	body {
 		padding: 0;
 		margin: 0;
 	}
 
-	html, body, .mobile, #mobileMap {
-		height: 100%;
+	html, body, .mobile, #mobileMap, #map {
+		height: 100vh;
 		width: 100vw;
 	}
 

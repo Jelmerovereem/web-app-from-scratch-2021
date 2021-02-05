@@ -14,38 +14,14 @@
 			crossorigin=""></script>
 		</head>
 		<body>
-			<div class="desktop">
+			<div class="searchContent">
 				<h1>Krijg het weer</h1>
 				<label for="city">Stad</label>
 				<input type="text" id="city" class="searchCity" value="Amsterdam">
 				<a href="javascript:void(0)" class="getLocation">Mijn locatie</a>
 				<a href="javascript:void(0)" class="searchBtn">Krijg het weer</a>
-				<article>
-					<table>
-						<tr>
-							<td>Temperature</td>
-							<td class="tempCell"></td>
-						</tr>
-					</table>
-					<div class="resizable">
-						<div class="resizers">
-							<div class='resizer top-left'></div>
-							<div class='resizer top-right'></div>
-							<div class='resizer bottom-left'></div>
-							<div class='resizer bottom-right'></div>
-							<div id="map"></div>
-						</div>
-					</div>
-				</article>
 			</div>
-			<div class="mobile">
-				<div class="searchContent">
-					<input type="text" class="searchCityMobile" value="Amsterdam">
-					<a href="javascript:void(0)" class="searchBtnMobile">Zoeken</a>
-				</div>
-				<div id="mobileMap"></div>
-			</div>
+			<div id="map"></div>
 			<script src="scripts/script.js"></script>
-			<script src="scripts/resize.js"></script>
 		</body>
 	</html>
