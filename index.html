@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 		<title>Single page web app</title>
 		<link rel="stylesheet" href="styles/style.css">
+		<link rel="icon" type="image/png" href="assets/favicon.png">
 		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
 			integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
 			crossorigin=""/>
@@ -15,11 +16,14 @@
 		</head>
 		<body>
 			<div class="searchContent">
-				<h1>Krijg het weer</h1>
-				<label for="city">Stad</label>
-				<input type="text" id="city" class="searchCity" value="Amsterdam">
-				<a href="javascript:void(0)" class="getLocation">Mijn locatie</a>
-				<a href="javascript:void(0)" class="searchBtn">Krijg het weer</a>
+				<!-- <h3>Krijg het weer</h3> -->
+				<div>
+					<!-- <label for="city">Stad</label> -->
+					<input type="text" id="city" class="searchCity" placeholder="Zoek een stad...">
+					<a href="javascript:void(0)" class="searchBtn">Zoek</a>
+					<a href="javascript:void(0)" class="getLocation">Mijn locatie</a>
+					<p class="err-msg"></p>
+				</div>
 			</div>
 			<div id="map"></div>
 			<script src="scripts/key.js"></script>
