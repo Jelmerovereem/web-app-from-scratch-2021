@@ -1,1 +1,52 @@
-<mxfile host="app.diagrams.net" modified="2021-02-08T13:50:30.986Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.146 Safari/537.36" version="14.3.0" etag="MezWWfsXtu7BUbw0gIS3" type="github"><diagram id="0Djbgz4iHGZcmh1q1ype">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-02-08T13:59:28.734Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.146 Safari/537.36" etag="7JTn6esrw5gBeV4JOznT" version="14.3.0" type="github">
+  <diagram id="0Djbgz4iHGZcmh1q1ype" name="Page-1">
+    <mxGraphModel dx="1185" dy="635" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="SeFLylKDZ3_vUsJZjrmW-1" value="leaflat map" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="150" y="490" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SeFLylKDZ3_vUsJZjrmW-2" value="L.map()" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#82B366;" vertex="1" parent="1">
+          <mxGeometry x="150" y="550" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SeFLylKDZ3_vUsJZjrmW-3" value="weather data" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#82b366;fillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="340" y="490" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SeFLylKDZ3_vUsJZjrmW-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="SeFLylKDZ3_vUsJZjrmW-4" target="SeFLylKDZ3_vUsJZjrmW-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SeFLylKDZ3_vUsJZjrmW-4" value="getCity(userInput)" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#82B366;" vertex="1" parent="1">
+          <mxGeometry x="340" y="550" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SeFLylKDZ3_vUsJZjrmW-5" value="L.tileLayer().addTo()" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#82B366;" vertex="1" parent="1">
+          <mxGeometry x="150" y="610" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SeFLylKDZ3_vUsJZjrmW-8" value="API" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#82b366;fillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="520" y="490" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SeFLylKDZ3_vUsJZjrmW-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="SeFLylKDZ3_vUsJZjrmW-9" target="SeFLylKDZ3_vUsJZjrmW-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SeFLylKDZ3_vUsJZjrmW-9" value="fetch(openweather?q={userInput})" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#82B366;" vertex="1" parent="1">
+          <mxGeometry x="520" y="550" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SeFLylKDZ3_vUsJZjrmW-11" value="Data" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#82b366;fillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="690" y="490" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SeFLylKDZ3_vUsJZjrmW-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="SeFLylKDZ3_vUsJZjrmW-12" target="SeFLylKDZ3_vUsJZjrmW-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SeFLylKDZ3_vUsJZjrmW-12" value="return data.json()" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#82B366;" vertex="1" parent="1">
+          <mxGeometry x="690" y="550" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SeFLylKDZ3_vUsJZjrmW-14" value="Render" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#82b366;fillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="870" y="490" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SeFLylKDZ3_vUsJZjrmW-15" value="toMap(coords, temp)" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#82B366;" vertex="1" parent="1">
+          <mxGeometry x="870" y="550" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
