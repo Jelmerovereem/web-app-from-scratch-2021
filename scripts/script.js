@@ -12,7 +12,7 @@ const tempCell = document.querySelector(".tempCell");
 
 
 /* Init leaflet map */
-export const leafletMap = L.map("map", {zoomControl: false}).setView([50,2], 13);
+export const leafletMap = L.map("map", {zoomControl: false}).setView([52.2351,5.2294], 5);
 L.tileLayer(`https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/{z}/{x}/{y}?access_token=${mapboxAccessToken}`, {
 	tileSize: 512,
 	zoomOffset: -1,
