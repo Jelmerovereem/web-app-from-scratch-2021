@@ -1,39 +1,18 @@
+import { getWeatherCity, getWeatherCoords } from "./modules/fetchdata.js";
+import { apikey, mapboxAccessToken } from "./utilities/key.js";
+import { errMsg } from "./utilities/renderUtils.js";
+import toMap from "./modules/renderToMap.js";
+
 /* Initiated variables */
-const baseUrl = "https://api.openweathermap.org/data/2.5/weather";
-const units = "metric";
+
 const searchInput = document.querySelector(".searchCity");
 const getLocationBtn = document.querySelector(".getLocation");
 const searchBtn = document.querySelector(".searchBtn");
 const tempCell = document.querySelector(".tempCell");
-const errMsg = document.querySelector(".err-msg");
 
-/* fetch weather data from openweather api based on coords */
-function getWeatherCoords(lat, lon) {
-	return fetch(`${baseUrl}?lat=${lat}&lon=${lon}&units=${units}&appid=${apikey}`)
-	.then(response => response.ok ? response.json() : console.log(response.ok))
-}
-
-/* fetch weather data from openweather api based on city name */
-function getWeatherCity(city) {
-	console.log(city)
-	return fetch(`${baseUrl}?q=${city}&units=${units}&appid=${apikey}`)
-	.then((response) => {
-		if (response.ok) {
-			errMsg.classList.remove("showError");
-			return response.json();
-		} else {
-			showErr();
-		}
-	})
-}
-
-function showErr() {
-	errMsg.classList.add("showError");
-	errMsg.innerText = "Kon opgegeven stad niet vinden. Probeer iets anders :)";
-}
 
 /* Init leaflet map */
-const leafletMap = L.map("map", {zoomControl: false}).setView([50,2], 13);
+export const leafletMap = L.map("map", {zoomControl: false}).setView([50,2], 13);
 L.tileLayer(`https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/{z}/{x}/{y}?access_token=${mapboxAccessToken}`, {
 	tileSize: 512,
 	zoomOffset: -1,
@@ -46,16 +25,6 @@ const popup = L.popup();
 
 function onMapClick(e) {
 	getCoords(e.latlng.lat, e.latlng.lng);
-}
-
-leafletMap.on("click", onMapClick);
-leafletMap.on("move", () => {leafletMap.invalidateSize();})
-
-/* set view of map */
-function toMap(coordinates, temp) {
-	leafletMap.setView(coordinates, 13);
-	const marker = L.marker(coordinates).addTo(leafletMap);
-	marker.bindPopup(`<b>Temperature</b><br>${temp}°C`).openPopup();
 }
 
 /* ask visitor for location access and push location to showPosition() */
@@ -71,9 +40,6 @@ function showPosition(position) {
 	getCoords(position.coords.latitude, position.coords.longitude)
 }
 
-getLocationBtn.addEventListener("click", getLocation);
-
-
 function getCoords(lat, lon) {
 	getWeatherCoords(lat, lon)
 	.then((data) => {
@@ -86,11 +52,13 @@ function getCoords(lat, lon) {
 function getCity() {
 	getWeatherCity(searchInput.value)
 	.then((data) => {
-		console.log(data)
 		//tempCell.innerText = `${data.main.temp}°C`;
 		toMap(data.coord, data.main.temp);
 	})
 	.catch(err => console.log(err))
 }
 
+leafletMap.on("click", onMapClick);
+leafletMap.on("move", () => {leafletMap.invalidateSize();})
+getLocationBtn.addEventListener("click", getLocation);
 searchBtn.addEventListener("click", getCity);
