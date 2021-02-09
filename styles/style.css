@@ -4,6 +4,9 @@ body {
 	margin: 0;
 }
 
+.hidden {
+	display: none;
+}
 
 html, body, #map {
 	height: 100vh;

@@ -43,17 +43,17 @@ function showPosition(position) {
 function getCoords(lat, lon) {
 	getWeatherCoords(lat, lon)
 	.then((data) => {
-		//tempCell.innerText = `${data.main.temp}°C`;
-		toMap(data.coord, data.main.temp);
+		toMap(data);
 	})
 	.catch(err => console.log(err))
 }
 
 function getCity() {
-	getWeatherCity(searchInput.value)
+	const city = searchInput.value;
+	getWeatherCity(city)
 	.then((data) => {
-		//tempCell.innerText = `${data.main.temp}°C`;
-		toMap(data.coord, data.main.temp);
+		console.log(data)
+		toMap(data);
 	})
 	.catch(err => console.log(err))
 }
@@ -62,3 +62,16 @@ leafletMap.on("click", onMapClick);
 leafletMap.on("move", () => {leafletMap.invalidateSize();})
 getLocationBtn.addEventListener("click", getLocation);
 searchBtn.addEventListener("click", getCity);
+
+const mainPage = document.querySelector(".main");
+const detailPage = document.querySelector(".detail");
+
+routie("", () => {
+	mainPage.classList.remove("hidden");
+	detailPage.classList.add("hidden");
+})
+
+routie("detailpagina", () => {
+	mainPage.classList.add("hidden");
+	detailPage.classList.remove("hidden");
+})
