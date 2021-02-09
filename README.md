@@ -36,7 +36,8 @@ $ browser-sync -w -s -p 5000 # Starts a browser-sync server on port 5000 that wa
 
 ## APIs used
 
-- [The OpenWeather map API](https://openweathermap.org/api)
+- [The OpenWeather map API](https://openweathermap.org/api)  
+With this API you can fetch weather data from all over the world. It has all different kind of fetches you can do. If you want 4 days forecast or just the current weather data, everything is possible.
 - [Leaflet map](https://leafletjs.com/)
 
 ## User Interaction Flow
