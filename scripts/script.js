@@ -1,4 +1,4 @@
-import { getWeatherCity, getWeatherCoords } from "./modules/fetchdata.js";
+import { getWeatherCity, getWeatherCoords } from "./modules/fetchData.js";
 import { apikey, mapboxAccessToken } from "./utilities/key.js";
 import { errMsg } from "./utilities/renderUtils.js";
 import toMap from "./modules/renderToMap.js";
