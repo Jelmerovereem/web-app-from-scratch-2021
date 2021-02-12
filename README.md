@@ -42,6 +42,13 @@ With this API you can fetch weather data from all over the world. It has all dif
 
 ## User Interaction Flow
 
+### Actor diagram
+![actordiagram](https://user-images.githubusercontent.com/58043913/107747844-69680700-6d18-11eb-9c1c-cf049806626e.png)
+
+### Flow chart
+![WAFS](https://user-images.githubusercontent.com/58043913/107747812-5a815480-6d18-11eb-8244-b0ebce7001ac.jpg)
+
+
 ## Design patterns used
 
 - Pure functional pattern
