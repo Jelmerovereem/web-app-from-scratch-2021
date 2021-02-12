@@ -1,6 +1,6 @@
 import { apikey } from "../utilities/key.js";
 import { errMsg } from "../utilities/renderUtils.js";
-import showErr from "../modules/showError.js";
+import showErr from "./showError.js";
 
 export {getWeatherCity, getWeatherCoords}
 
