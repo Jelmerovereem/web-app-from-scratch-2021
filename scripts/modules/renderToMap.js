@@ -13,9 +13,9 @@ export default function toMap(data) {
 	const markerHtml = `
 		<div class="temp-header">
 			<span>${temp}°C</span>
-			<img src="${iconsUrl}${icon}@2x.png" alt="weather-icon">
+			<img src="${iconsUrl}${icon}@2x.png" class="weatherIcon" alt="weather-icon">
 		</div>
-		<p><a href="#detailpagina">${city}</a></p>
+		<p><a href="#detailpagina/:${city}">${city}</a></p>
 	`;
 	marker.bindPopup(markerHtml).openPopup();
 }

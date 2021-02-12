@@ -71,7 +71,9 @@ routie("", () => {
 	detailPage.classList.add("hidden");
 })
 
-routie("detailpagina", () => {
+routie("detailpagina/:cityName", (cityName) => {
 	mainPage.classList.add("hidden");
 	detailPage.classList.remove("hidden");
+	const city = cityName.replace(":", "");
+	document.querySelector(".cityName").innerText = city;
 })

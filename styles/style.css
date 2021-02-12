@@ -64,12 +64,41 @@ html, body, #map {
 	//padding: 13px 19px;
 }
 
-.leaflet-popup-content-wrapper .temp-header {
+.temp-header {
 	background: lightgreen;
 	width: 100%;
-	
 	display: flex;
+	justify-content: center;
+	align-items: center;
 	color: white;
+	border-radius: 10px 10px 0 0;
+}
+
+.temp-header span {
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.leaflet-popup-content p, .leaflet-popup-content a {
+	color: black;
+	text-decoration: none;
+	text-align: center;
+}
+
+.leaflet-popup-content a:after {
+	content: url(../assets/arrow-right.svg);
+	position: absolute;
+	right: 30px;
+	transition: right .5s;
+}
+
+
+.leaflet-popup-content:hover a:after {
+	right: 25px;
+}
+
+.weatherIcon {
+	width: 45px;
 }
 
 @media screen and (max-width: 768px) {
@@ -86,4 +115,25 @@ html, body, #map {
 		display: block;
 		margin: 5px 0 15px 0;
 	}
+}
+
+.detail {
+	background: linear-gradient(to bottom, blue, lightblue);
+	height: 600px;
+}
+
+.detail .cityName {
+	color: white;
+	text-align: center;
+	font-size: 36px;
+}
+
+.backBtn img {
+	width: 30px;
+}
+
+.detail .temp {
+	color: white;
+	text-align: center;
+	font-size: 20px;
 }
