@@ -1,3 +1,4 @@
+import routes from "./modules/routes.js";
 import { getWeatherCity, getWeatherCoords } from "./modules/fetchData.js";
 import { apikey, mapboxAccessToken } from "./utilities/key.js";
 import { errMsg } from "./utilities/renderUtils.js";
@@ -63,16 +64,4 @@ leafletMap.on("move", () => {leafletMap.invalidateSize();})
 getLocationBtn.addEventListener("click", getLocation);
 searchBtn.addEventListener("click", getCity);
 
-const mainPage = document.querySelector(".main");
-const detailPage = document.querySelector(".detail");
-
-routie("", () => {
-	mainPage.classList.remove("hidden");
-	detailPage.classList.add("hidden");
-})
-
-routie("detailpagina/:cityName", (cityName) => {
-	mainPage.classList.add("hidden");
-	detailPage.classList.remove("hidden");
-	document.querySelector(".cityName").innerText = cityName;
-})
+routes();
