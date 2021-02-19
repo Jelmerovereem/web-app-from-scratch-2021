@@ -22,17 +22,24 @@
 						<!-- <label for="city">Stad</label> -->
 						<input type="text" id="city" class="searchCity" placeholder="Zoek een stad...">
 						<a href="javascript:void(0)" class="searchBtn">Zoek</a>
-						<a href="javascript:void(0)" class="getLocation">Mijn locatie</a>
+						<a href="javascript:void(0)" class="getLocation"><img src="assets/ownLocation.svg">Mijn locatie</a>
 						<p class="err-msg"></p>
 					</div>
 				</div>
 				<div id="map"></div>
 			</div>
 			<div class="detail hidden">
+				<!-- <img src="assets/background-mountain.svg" class="bgMountain" alt=""> -->
+				<img src="assets/cloud-dark.png" class="cloud" alt="">
 				<a href="#" class="backBtn"><img src="assets/back.svg"></a>
 				<p class="cityName">Stadnaam</p>
+				<span class="updatedText"></span>
+				<p class="temp"></p>
+				<p class="weatherDesc"></p>
+				<p class="dataSources"><span>Weer data van <a href="https://openweathermap.org/api" target="_blank">Open Weather</a></span> | <span class="imageSrc">Achtergrond foto van <a href="" target="_blank"></a></span></p>
 			</div>
 			<!-- Source for favicon <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
+			<!-- <a href="https://www.vecteezy.com/free-vector/forest">Forest Vectors by Vecteezy</a> -->
 			<script src="scripts/vendor/routie.js"></script>
 			<script src="scripts/script.js" type="module"></script>
 		</body>
