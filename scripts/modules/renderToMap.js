@@ -1,4 +1,4 @@
-import { leafletMap } from "../script.js";
+import { leafletMap, searchInput } from "../script.js";
 
 const iconsUrl = `http://openweathermap.org/img/wn/`;
 
@@ -18,4 +18,5 @@ export default function toMap(data) {
 		<p><a href="#detailpagina/${city}">${city}</a></p>
 	`;
 	marker.bindPopup(markerHtml).openPopup();
+	searchInput.value = city;
 }

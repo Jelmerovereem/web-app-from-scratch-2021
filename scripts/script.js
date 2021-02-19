@@ -6,7 +6,7 @@ import toMap from "./modules/renderToMap.js";
 
 /* Initiated variables */
 
-const searchInput = document.querySelector(".searchCity");
+export const searchInput = document.querySelector(".searchCity");
 const getLocationBtn = document.querySelector(".getLocation");
 const searchBtn = document.querySelector(".searchBtn");
 const tempCell = document.querySelector(".tempCell");
