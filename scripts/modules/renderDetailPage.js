@@ -46,7 +46,7 @@ export default function renderDetailPage(data) {
 		rain()
 	}
 
-	if (weatherDesc === "snow" || weatherDesc === "clouds") {
+	if (weatherDesc === "snow" || weatherDesc === "clouds" || weatherDesc === "mist") {
 		detailPage.style.background = `linear-gradient(to bottom, rgba(97,132,186,0.8), rgba(143,169,206,0.8))`;
 	} else if (weatherDesc === "drizzle" || weatherDesc === "rain") {
 		detailPage.style.background = `linear-gradient(to bottom, rgba(89,106,132,0.8), rgba(117,133,149,0.8))`;
@@ -55,5 +55,5 @@ export default function renderDetailPage(data) {
 	}
 
 	updatedText.innerText = `Laatst geüpdate op ${new Date().getHours()}:${new Date().getMinutes()<10?"0":""}${new Date().getMinutes()}`;
-	tempEl.innerText = `${parseInt(data.main.temp)}°C`;
+	tempEl.innerText = `${Math.round(data.main.temp)}°C`;
 }
