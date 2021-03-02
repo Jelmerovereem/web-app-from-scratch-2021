@@ -51,19 +51,19 @@ With this API you can fetch weather data from all over the world. It has all dif
 
 ### API Response
 This is what an API response looks like from The OpenWeather API
-```json
+```js
 data = {
-	clouds: {}, // the cloudiness in %
-	coord: {}, //City geo location. Lon and lat
-	dt, // Last time when weather was updates in unix (UTC)
-	id, // the city ID
-	main: {}, // the main weather information, temperature, feelslike, etc.
-	name, // city name
-	sys: {}, // More about the country and timezone
-	timezone, // how many seconds difference from the UTC timezone
-	visibility, // the visiblity meter
-	weather:[], //An array with weather objects containing weather information like description and id for icon
-	wind: {} // information about the wind speed, degrees, etc.
+	clouds: {}, // The cloudiness in %
+	coord: {},  // City geo location. Lon and lat
+	dt,         // Last time when weather was updates in unix (UTC)
+	id,         // The city ID
+	main: {},   // The main weather information, temperature, feelslike, etc.
+	name,       // City name
+	sys: {},    // More about the country and timezone
+	timezone,   // How many seconds difference from the UTC timezone
+	visibility, // The visiblity meter
+	weather:[], // An array with weather objects containing weather information like description and id for icon
+	wind: {}    // Information about the wind speed, degrees, etc.
 }
 ```
 
