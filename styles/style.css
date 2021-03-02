@@ -183,16 +183,11 @@ html, body, #map {
 	z-index: 0;
 	position: absolute;
 	top: 50%;
-	/*bottom: 0;*/
 	width: 100vw;
 	animation: drawArc1 10s linear forwards;
 }
 
 .sunOrMoon {
-	/*position: absolute;*/
-	/*top: 50%;*/
-	/*left: 50%;
-	transform: translateX(-50%*/);
 	display: inline-block;
 	animation: drawArc2 10s linear forwards;
 }
@@ -243,7 +238,6 @@ html, body, #map {
 	width: 600px;
 	z-index: 0;
 	opacity: .5;
-	//transform: translateX(30px);
 	animation: slide 50s infinite;
 }
 
