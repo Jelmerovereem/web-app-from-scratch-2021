@@ -70,7 +70,7 @@ data = {
 ## User Interaction Flow
 
 ### Actor diagram
-![actordiagram](https://user-images.githubusercontent.com/58043913/107747844-69680700-6d18-11eb-9c1c-cf049806626e.png)
+![Actor diagram](https://user-images.githubusercontent.com/58043913/109629637-52ad1700-7b44-11eb-9d42-624298f2185e.jpg)
 
 ### Flow chart
 ![WAFS](https://user-images.githubusercontent.com/58043913/107747812-5a815480-6d18-11eb-8244-b0ebce7001ac.jpg)
