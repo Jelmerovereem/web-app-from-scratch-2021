@@ -46,7 +46,14 @@ export default function renderDetailPage(data) {
 	if (weatherDesc === "drizzle" || weatherDesc === "rain") {
 		detailPage.insertAdjacentHTML("afterbegin", `<div class="rain"></div>`);
 		rain()
-		cloud.src = `assets/cloud-dark.png`;
+	}
+
+	if (weatherDesc === "snow" || weatherDesc === "clouds") {
+		detailPage.style.background = `linear-gradient(to bottom, rgba(97,132,186,0.8), rgba(143,169,206,0.8))`;
+	} else if (weatherDesc === "drizzle" || weatherDesc === "rain") {
+		detailPage.style.background = `linear-gradient(to bottom, rgba(89,106,132,0.8), rgba(117,133,149,0.8))`;
+	} else {
+		detailPage.style.background = `linear-gradient(to bottom, rgba(22,119,210,0.8), rgba(107,165,228,0.8))`;
 	}
 
 	updatedText.innerText = `Laatst geüpdate op ${new Date().getHours()}:${new Date().getMinutes()<10?"0":""}${new Date().getMinutes()}`;
