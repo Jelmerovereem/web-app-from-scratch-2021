@@ -6,7 +6,7 @@ const iconsUrl = `http://openweathermap.org/img/wn/`;
 /* set view of map */
 export default function toMap(data) {
 	const coordinates = data.coord;
-	const temp = Math.floor(data.main.temp);
+	const temp = Math.round(data.main.temp);
 	const city = data.name;
 	const icon = data.weather[0].icon;
 	leafletMap.setView(coordinates, 13);
