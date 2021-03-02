@@ -1,7 +1,6 @@
 import addSnow from "../modules/snow.js";
 import rain from "../modules/rain.js";
 import { fetchData } from "../modules/fetchData.js";
-import insertBackground from "../modules/backgroundImage.js";
 
 
 export const detailPage = document.querySelector(".detail");
