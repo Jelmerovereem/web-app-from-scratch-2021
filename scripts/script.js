@@ -46,3 +46,4 @@ function initEventListeners() {
 
 initEventListeners();
 routes();
+getAverage();
