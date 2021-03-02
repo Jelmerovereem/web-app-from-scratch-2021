@@ -141,10 +141,61 @@ html, body, #map {
 
 .detail {
 	background: linear-gradient(to bottom, rgba(22,119,210,0.8), rgba(107,165,228,0.8));
+	background-size: 100vw 63vh,;
 	height: 100vh;
 	padding-top: 50px;
 }
 
+@media screen and (max-width: 877px) {
+	.detail {
+		background-size: 173vh;
+	}
+}
+
+.bgMountain {
+	position: absolute;
+	bottom: -28%;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 1;
+}
+
+/* https://stackoverflow.com/questions/18912476/css-animation-across-an-arc */
+@keyframes drawArc1 {
+    0% {
+    	transform: rotate(0);
+    }
+    100% {
+    	transform: rotate(90deg);
+    }
+}
+
+@keyframes drawArc2 {
+    0% {
+    	transform: rotate(0);
+    }
+    100% {
+    	transform: rotate(-90deg);
+    }
+}
+
+.wrapper {
+	z-index: 0;
+	position: absolute;
+	top: 50%;
+	/*bottom: 0;*/
+	width: 100vw;
+	animation: drawArc1 10s linear forwards;
+}
+
+.sunOrMoon {
+	/*position: absolute;*/
+	/*top: 50%;*/
+	/*left: 50%;
+	transform: translateX(-50%*/);
+	display: inline-block;
+	animation: drawArc2 10s linear forwards;
+}
 
 #sky {
 	position: absolute;
