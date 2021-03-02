@@ -4,7 +4,7 @@
 
 [Link to live version](https://jelmerovereem.github.io/web-app-from-scratch-2021)
 
-A goal for this app will be put here once that has been determined.
+Get the weather details from all over the world with a interactive map.
 
 ## Index
 
@@ -26,19 +26,28 @@ Then proceed to clone this repository.
 
 ```shell
 $ git clone https://github.com/Jelmerovereem/web-app-from-scratch-2021
-$ cd web-app
+$ cd web-app-from-scratch-2021
 $ browser-sync -w -s -p 5000 # Starts a browser-sync server on port 5000 that watches for file changes in the current directory
 ```
 
 ## Features
 
-- [ ] A feature list
+- [x] Interactive map
+- [x] Weather based on searched city
+- [x] Weather based on your own location
+- [x] Clickable pop-up forwarding to a detail page
+- [x] Detail page with a "last updated on" reminder
+- [x] Detail page with the temperature and weather description
+- [x] Background visuals matching the weather and local time
+- [ ] Weather forecast, for upcoming days
+
 
 ## APIs used
 
 - [The OpenWeather map API](https://openweathermap.org/api)  
 With this API you can fetch weather data from all over the world. It has all different kind of fetches you can do. If you want 4 days forecast or just the current weather data, everything is possible.
 - [Leaflet map](https://leafletjs.com/)
+- ~~[Unsplash API](https://unsplash.com/developers)~~
 
 ## User Interaction Flow
 
@@ -48,14 +57,5 @@ With this API you can fetch weather data from all over the world. It has all dif
 ### Flow chart
 ![WAFS](https://user-images.githubusercontent.com/58043913/107747812-5a815480-6d18-11eb-8244-b0ebce7001ac.jpg)
 
-
-## Design patterns used
-
-- Pure functional pattern
-- PubSub pattern
-- Immutability pattern
-- Composition pattern
-
+![Detail page](https://user-images.githubusercontent.com/58043913/109627291-c3066900-7b41-11eb-9e98-6f283fb5b2a5.png)
 <!-- Add a nice poster image here at the end of the week, showing off your shiny frontend 📸 -->
-
-<!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
