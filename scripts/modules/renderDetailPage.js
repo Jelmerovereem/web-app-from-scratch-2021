@@ -10,23 +10,24 @@ export default function renderDetailPage(data) {
 	const updatedText = document.querySelector(".updatedText");
 	const tempEl = document.querySelector(".temp");
 	const weatherDescEl = document.querySelector(".weatherDesc");
+	const sunOrMoon = document.querySelector(".sunOrMoon");
 
-	console.log(data)
+
 	const cityTime = new Date();
 	cityTime.setHours(cityTime.getUTCHours() + (data.timezone/3600));
-	console.log(cityTime)
-
 
 	const cityHours = cityTime.getHours();
 
 	const isDayTime = cityHours > 6 && cityHours < 20; // https://stackoverflow.com/a/46908558
 	
+	if (isDayTime) {
+		sunOrMoon.src = "assets/sun.png";
+	} else {
+		sunOrMoon.src = "assets/moon.png";
+	}
 
 	const weatherDesc = data.weather[0].main.toLowerCase();
 	weatherDescEl.innerText = weatherDesc;
-	cloud.src = `assets/cloud-${weatherDesc}.png`;
-
-	insertBackground(data.name, weatherDesc);
 
 	if (document.querySelector("#sky")) {
 		document.querySelector("#sky").remove();
