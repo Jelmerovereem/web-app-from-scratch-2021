@@ -55,13 +55,13 @@ This is what an API response looks like from The OpenWeather API
 data = {
 	clouds: {}, // The cloudiness in %
 	coord: {},  // City geo location. Lon and lat
-	dt,         // Last time when weather was updates in unix (UTC)
-	id,         // The city ID
+	dt: ,         // Last time when weather was updates in unix (UTC)
+	id: ,         // The city ID
 	main: {},   // The main weather information, temperature, feelslike, etc.
-	name,       // City name
+	name: ,       // City name
 	sys: {},    // More about the country and timezone
-	timezone,   // How many seconds difference from the UTC timezone
-	visibility, // The visiblity meter
+	timezone: ,   // How many seconds difference from the UTC timezone
+	visibility: , // The visiblity meter
 	weather:[], // An array with weather objects containing weather information like description and id for icon
 	wind: {}    // Information about the wind speed, degrees, etc.
 }
