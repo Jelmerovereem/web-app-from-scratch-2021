@@ -1,4 +1,4 @@
-# Web App From Scratch @cmda-minor-web 2020 - 2021
+# Web App From Scratch - Weather app
 
 ![Badge stating project is licensed under MIT license](https://img.shields.io/github/license/jelmerovereem/web-app-from-scratch-2021) ![Badge stating amount of issues open](https://img.shields.io/github/issues/jelmerovereem/web-app-from-scratch-2021) [![](https://img.shields.io/badge/site--status-up-success)](https://jelmerovereem.github.io/web-app-from-scratch-2021) [![Badges via shields.io](https://img.shields.io/badge/badges%20via-shields.io-brightgreen)](shields.io)
 
