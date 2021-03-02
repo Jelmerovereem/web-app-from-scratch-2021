@@ -49,6 +49,24 @@ With this API you can fetch weather data from all over the world. It has all dif
 - [Leaflet map](https://leafletjs.com/)
 - ~~[Unsplash API](https://unsplash.com/developers)~~
 
+### API Response
+This is what an API response looks like from The OpenWeather API
+```json
+data = {
+	clouds: {}, // the cloudiness in %
+	coord: {}, //City geo location. Lon and lat
+	dt, // Last time when weather was updates in unix (UTC)
+	id, // the city ID
+	main: {}, // the main weather information, temperature, feelslike, etc.
+	name, // city name
+	sys: {}, // More about the country and timezone
+	timezone, // how many seconds difference from the UTC timezone
+	visibility, // the visiblity meter
+	weather:[], //An array with weather objects containing weather information like description and id for icon
+	wind: {} // information about the wind speed, degrees, etc.
+}
+```
+
 ## User Interaction Flow
 
 ### Actor diagram
