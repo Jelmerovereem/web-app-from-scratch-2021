@@ -1,4 +1,5 @@
-import { leafletMap, searchInput } from "../script.js";
+import { leafletMap } from "../utilities/mapUtils.js";
+import { searchInput } from "../utilities/searchUtils.js";
 
 const iconsUrl = `http://openweathermap.org/img/wn/`;
 
