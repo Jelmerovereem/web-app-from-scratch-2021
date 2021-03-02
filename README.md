@@ -6,6 +6,8 @@
 
 Get the weather details from all over the world with a interactive map.
 
+![Screenshots](https://user-images.githubusercontent.com/58043913/109636627-1978a500-7b4c-11eb-8931-e4d987fda056.png)
+
 ## Index
 
 - [Getting started](#getting-started)
@@ -74,6 +76,3 @@ data = {
 
 ### Flow chart
 ![WAFS](https://user-images.githubusercontent.com/58043913/107747812-5a815480-6d18-11eb-8244-b0ebce7001ac.jpg)
-
-![Detail page](https://user-images.githubusercontent.com/58043913/109627291-c3066900-7b41-11eb-9e98-6f283fb5b2a5.png)
-<!-- Add a nice poster image here at the end of the week, showing off your shiny frontend 📸 -->
