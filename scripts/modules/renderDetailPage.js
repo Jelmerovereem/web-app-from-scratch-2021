@@ -2,7 +2,6 @@ import addSnow from "../modules/snow.js";
 import rain from "../modules/rain.js";
 import { fetchData } from "../modules/fetchData.js";
 
-
 export const detailPage = document.querySelector(".detail");
 
 export default function renderDetailPage(data) {
@@ -11,7 +10,6 @@ export default function renderDetailPage(data) {
 	const tempEl = document.querySelector(".temp");
 	const weatherDescEl = document.querySelector(".weatherDesc");
 	const sunOrMoon = document.querySelector(".sunOrMoon");
-
 
 	const cityTime = new Date();
 	cityTime.setHours(cityTime.getUTCHours() + (data.timezone/3600));
